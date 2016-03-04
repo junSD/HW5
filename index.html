@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="noteriousApp">
+
+<head>
+	<title>Boards</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
+	<script src="scripts/vendor/angular.min.js"></script>
+	<script src="scripts/vendor/angular-route.js"></script>
+	<script src="scripts/vendor/jquery.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/routes.js"></script>
+	<script src="scripts/controllers/boards-controller.js"></script>
+	<script src="scripts/controllers/notes-controller.js"></script>
+	<script src="scripts/services/boardsService.js"></script>
+	<script src="scripts/directives/draggable.js"></script>
+</head>
+
+<body class="bg-blue">
+	<header class="navbar-clear" role="banner">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#/" class="navbar-brand">
+				<img src="images/logo.png" alt="noterio.us" />
+			</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+			<li>
+            <a class="blue" href="#/">Boards</a>
+          </li>
+				<li>
+					<a class="blue" href="http://angularjs.org/" target="_blank">AngularJS</a>
+				</li>
+				<li>
+					<a class="blue" href="https://github.com/simpulton/noterious" target="_blank">GITHUB</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</header>
+
+	<!-- Add your site or application content here -->
+	<div>
+		<div id="content-container" ng-view></div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<div draggable class="edit board my-repeat-animation" ng-repeat="(boardId, board) in boardsCtrl.boards">
+	<div class="caption">
+		<button type="button" class="top-right-corner" ng-click="boardsCtrl.remove(boardId)">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+		<div><input type="text" class="medium" placeholder="Board Title" ng-model="board.title"></div>
+
+		<div><input type="text" class="medium" placeholder="Author" ng-model="board.author" required></div>
+
+		<div><input type="text" placeholder="Board description" ng-model="board.description"></div>
+		<div class="bottom x-small"><input type="checkbox" ng-model="board.isPublic"> Board is Public</div>
+		<a ng-href="#/board/{{::boardId}}" type="button" class="view bottom-right-corner">
+			<span class="glyphicon glyphicon-arrow-right"></span>
+		</a>
+	</div>
+</div>
+<div draggable class="create board">
+	<div class="caption">
+		<form name="boardForm" ng-submit="boardsCtrl.add(boardsCtrl.newBoard, boardForm)">
+			<fieldset>
+				<div><input type="text" class="medium" placeholder="Board Title" ng-model="boardsCtrl.newBoard.title" required></div>
+
+				<div><input type="text" class="medium" placeholder="Author" ng-model="boardsCtrl.newBoard.author" required></div>
+
+				<div><input type="text" placeholder="Board description" ng-model="boardsCtrl.newBoard.description" required></div>
+				<div class="bottom x-small"><input type="checkbox" ng-model="boardsCtrl.newBoard.isPublic"> Board is Public</div>
+				<button type="submit" class="bottom-right-corner"><span class="glyphicon glyphicon-plus"></span></button>
+			</fieldset>
+		</form>
+	</div>
+</div>
