@@ -9,7 +9,14 @@
 			boardsService = {};
 
 		boardsService.find = function() {
+			
+		// var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
+		// $scope.data = $firebaseObject(ref);
+
+		// console.log($scope.data);
+
 			var url = baseUrl + '/boards.json';
+			console.log($http.get(url));
 			return $http.get(url);
 		}
 
@@ -37,7 +44,7 @@
 
 		boardsService.createNote = function(title, content, boardId) {
 			var url = baseUrl + 'boards/' + boardId + '/notes.json';
-			var params = {title: title, content: content};
+			var params = {title: title, content: content, tagsDates: tagsDates};
 
 			return $http.post(url, params);
 		}
@@ -45,6 +52,7 @@
 		boardsService.removeNote = function (boardId, noteId) {
 			var url = baseUrl + 'boards/' + boardId + '/notes/' + noteId + '.json';
 			return $http.delete(url);
+
 		};
 
 		return boardsService;

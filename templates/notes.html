@@ -5,6 +5,7 @@
 		</button>
 		<div><input type="text" class="medium" placeholder="Note Title" ng-model="note.title"></div>
 		<div><textarea autosize placeholder="Note content" ng-model="note.content"></textarea></div>
+		<div><span ng-model="note.tagsDates.date">{{note.tagsDates.date | date:'MM/dd/yyyy @ h:mma'}}</span></div>
 	</div>
 </div>
 <div draggable class="create note">
@@ -13,6 +14,7 @@
 			<fieldset>
 				<div><input type="text" class="medium" placeholder="Note Title" ng-model="notesCtrl.newNote.title" required/></div>
 				<div><textarea autosize placeholder="Note content" ng-model="notesCtrl.newNote.content" required></textarea></div>
+				
 				<button type="submit" class="bottom-right-corner"><span class="glyphicon glyphicon-plus"></span></button>
 			</fieldset>
 		</form>

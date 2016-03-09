@@ -1,0 +1,26 @@
+{
+  "name": "HW_boards_bower",
+  "homepage": "https://github.com/junSD/HW5",
+  "authors": [
+    "Sergii Dovgal <sergiidovgal@gmail.com>"
+  ],
+  "description": "HW_boards_bower",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.0",
+    "angularfire": "^1.1.4",
+    "angular": "^1.5.0",
+    "firebase": "^2.4.1",
+    "jquery-ui": "^1.11.4",
+    "jquery": "^2.2.1"
+  }
+}

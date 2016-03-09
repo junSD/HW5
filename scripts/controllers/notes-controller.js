@@ -9,9 +9,10 @@
 			defaults = {
 				title: '',
 				content: '',
-				tags: []
-			};
+				tags: {}	
+				};
 		vm.newNote = angular.copy(defaults);
+		
 
 		vm.add = function (note, noteForm) {
 			BoardsService
@@ -42,7 +43,7 @@
 			form.$setPristine();
 			vm.newNote = angular.copy(defaults);
 		}
-		
+	
 		_updateNotes();
 		
 	}

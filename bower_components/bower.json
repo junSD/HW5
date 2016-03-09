@@ -1,0 +1,25 @@
+{
+  "name": "HW5_boards",
+  "homepage": "https://github.com/junSD/HW5",
+  "authors": [
+    "Sergii Dovgal <sergiidovgal@gmail.com>"
+  ],
+  "description": "HW5_boards",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.0",
+    "angular": "^1.5.0",
+    "jquery": "^2.2.1",
+    "jquery-ui": "^1.11.4"
+  },
+  "private": true
+}
